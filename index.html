@@ -3,8 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Xentech</title>
+    <title>Xen Matrix</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- splide js  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.9/dist/css/splide.min.css" />
+
+    <!-- splide js  -->
   </head>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -13,39 +17,42 @@
     
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Xentech</a>
+          <a class="navbar-brand" href="#"><img src="/images/logo.png" class="logo" alt="logo" style="height: 80px"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/back-office-support.html">Back Office Support</a></li>
+                  <li><a class="dropdown-item" href="/lead-generation.html">Lead Services</a></li>
+                </ul>
               </li>
               
               <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
+                <a class="nav-link" href="#about">About</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Case Studies</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
-              </li>
-              <button class="btn" type="submit">Contact Now</button>
-            </form>
+            </ul>
+            
+              <button id="modal-btn" class="btn" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact Now</button>
+            
           </div>
         </div>
       </nav>
-      <header class="container-fluid">
-        <h2 class="text-center text-white fs-1 fw-bolder hero-title" >Your Global Strategic Partner In The World Of Digital<br> Customer Service Solution</h2>
-    </header>
+      <header class="container-fluid" id="particles-js">
+        <h2 class="text-center text-white fs-1 fw-bolder hero-title" >Powering Customer Experience and Digital Outsourcing <br> for the Fastest Growing Brands</h2>
+      </header>
     <!-- end of header  -->
     <!-- play button goes here  -->
-    <div class="play mb-5" style="">
+    <div class="play mb-5">
       <div class="container">
           <div class="row justify-content-center">
               <div class="col-lg-6" style="">
@@ -59,11 +66,48 @@
               </div>
           </div>
       </div>
+    </div>
+
+  <!-- modal goes here  -->
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+      <div class="modal-content bg-info">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Contact Us Now!</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="modalForm">
+            <input type="hidden" name="_captcha" value="false">
+            <div class="mb-3">
+              <label for="exampleInputFullName1" class="form-label">Full Name</label>
+              <input type="text" name="name" class="form-control" id="exampleInputFullName1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputMessage" class="form-label">Message</label>
+              <textarea type="text" name="message" class="form-control" id="exampleInputMessage" placeholder="message" ></textarea>
+            </div>
+            <div class="text-end">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <!-- modal goes here  -->
+
+
 
   <!-- about us section goes here  -->
 
-  <section class="about-two pt-120 pb-60">
+  <section id="about" class="about-two pt-120 pb-60">
     <div class="container">
         <div class="row gy-5 align-items-center">
             <div class="col-lg-6 pe-lg-5">
@@ -82,8 +126,8 @@
                         <p class="section-heading__subtitle">Donec interdum metus et hendrerit aliquet dolor diam satis ligula eget egestas libero turpis velmi Nunc nulla.</p>
                         <p class="section-heading__desc">Gonec elit libero sodales nec volutpat a, suscipit non turpis. Nullam sagittis. Suspendisse pulvinar augue ac venenatis condimentum sem libero volutpat nibh nec pellentesque velit pede quis nunc</p>
                     </div>
-                    <p class="about-right__desc">Lorem ipsum dolor sit amet, hendrerit omittantur melestut vidit animal iracundia luis.</p>
-                    <div class="row gy-4 mt-2 statistics">
+                    <!-- <p class="about-right__desc">Lorem ipsum dolor sit amet, hendrerit omittantur melestut vidit animal iracundia luis.</p> -->
+                    <!-- <div class="row gy-4 mt-2 statistics">
                         <div class="col-sm-4 col-4">
                             <div class="counterup-item text-start">
                                 <div class="counterup-item__number">
@@ -108,7 +152,7 @@
                                 <p class="para">Winning Award</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -117,6 +161,49 @@
 
 
   <!-- about us section goes here  -->
+  
+<!-- our trusted partners -->
+
+<div class="container text-center">
+  <h2 class="text-center my-3">Our Trusted Partners</h2>
+  <div class="row justify-content-center">
+        <img src="/images/trusted-partners/pt-1.jpeg" style="height: auto; width: 160px;" alt="">
+        <img src="/images/trusted-partners/pt-2.png" style="height: auto; width: 160px;" alt="">
+        <img src="/images/trusted-partners/pt-3.jpeg" style="height: auto; width: 160px;" alt="">
+        <img src="/images/trusted-partners/pt-4.jpeg" style="height: auto; width: 160px;" alt="">
+        <img src="/images/trusted-partners/pt-5.png" style="height: auto; width: 160px;" alt="">
+        <img src="/images/trusted-partners/pt-6.jpeg" style="height: auto; width: 160px;" alt="">
+    
+  </div>
+
+</div>
+
+<!-- our trusted partners -->
+
+
+  <!-- tools we used  -->
+
+  
+<!--   <div class="container text-center">
+    <h2 class="text-center my-3">Tools we used</h2>
+    <div class="row justify-content-center">
+          <img src="/images/Tool USed/Copy of images (2).png" style="height: auto; width: 160px;" alt="">
+          <img src="/images/Tool USed/Copy of images (3).png" style="height: auto; width: 160px;" alt="">
+          <img src="/images/Tool USed/Copy of images (4).jpeg" style="height: auto; width: 160px;" alt="">
+          <img src="/images/Tool USed/Copy of images (5).jpeg" style="height: auto; width: 160px;" alt="">
+          <img src="/images/Tool USed/Copy of images (6).png" style="height: auto; width: 160px;" alt="">
+          <img src="/images/Tool USed/Copy of images (7).png" style="height: auto; width: 160px;" alt="">
+          <img src="/images/Tool USed/salesforce.png" style="height: auto; width: 160px;" alt="">
+          <img src="/images/Tool USed/Copy of images.png" style="height: auto; width: 160px;" alt="">
+      
+    </div>
+
+  </div>
+ -->
+
+
+
+  <!-- tools we used  -->
 
 
 
@@ -124,7 +211,7 @@
   <!-- features section goes here  -->
   <section class="about-two pt-120 pb-60">
     <div class="container">
-        <div class="row gy-5 align-items-center">
+        <div class="row gy-5 align-items-center feature-section">
             <div class="col-lg-6">
                 <div class="about-right ps-lg-3">
                     <div class="section-heading style-two">
@@ -140,7 +227,7 @@
                         <div class="ms-2 mt-2 pe-2 author">
                           <h5>Dianne Russell
                           </h3>
-                          <p>CEO, Xentech</p>
+                          <p>CEO, Xen Matrix</p>
                         </div>
                       </div>
                       <div>
@@ -166,21 +253,340 @@
 
   <!-- features section goes here  -->
 
+   <!-- outcome based card  -->
+
+   <div class="container my-5">
+    <h3 class="text-center">Our Best Effort only for you
+    </h3>
+    <div class="row m-0 p-0 d-flex justify-content-around my-5">
+        <div class="col-md-3 solution-card">
+            <i class="fa-solid fa-wifi fs-2"></i>
+            <h4 class="my-3 text-white">Capability & Performance</h4>
+            <p>We provide high-performance outsourced teams based off-shore in Bangladesh or nearshore in South Africa, with established Centres of Excellence focused on continually innovating our back-office outsourcing solutions.</p>
+        </div>
+        <div class="col-md-3 solution-card">
+            <i class="fa-brands fa-uncharted fs-2"></i>
+            <h4 class="my-3 text-white">Scalability & Flexibility</h4>
+            <p>High-performing associates safeguarded technology and connection, and ongoing support enables you to stay agile to changing market trends, seasonal shifts, and unexpected events.</p>
+        </div>
+        <div class="col-md-3 solution-card">
+            <i class="fa-solid fa-gauge fs-2"></i>
+            <h4 class="my-3 text-white">Speed & Accuracy</h4>
+            <p>No more missed deadlines, inaccuracy, or mediocre output. Our extensive and scalable back-office functions boost work quality and give your business the results it deserves.</p>
+        </div>
+    </div>
+    <div class="row m-0 p-0 d-flex justify-content-around my-5">
+      <div class="col-md-3 solution-card">
+        <i class="fa-solid fa-clock fs-2"></i>
+          <h4 class="my-3 text-white">24*365 Days Support</h4>
+          <p>We provide 24 hours in 365 days high-performance outsourced teams based off-shore support form you.</p>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- outcome based card  -->
+
   <!-- services section goes here  -->
 
   <div class="container-fluid">
     <div class="container">
-      <h5 class="text-center">Service</h5>
-      <h4 class="text-center my-3">Our Services</h4>
+      <h5 class="text-center service">Our Services</h5>
+    </div>
+    <div class="container">
+      <div class="service-temp d-flex p-4 my-5 align-items-center">
+        <div class="service-img me-4">
+          <img src="/images/lead-research.svg" alt="lead-research">
+        </div>
+        <div class="service-details">
+          <h3 class="mb-4 service-temp-title">Lead Research</h3>
+          <p class="service-temp-desc">Xen Matrix is the top B2B Lead Services agency when it comes to high-quality, targeted sales data. Our skilled team of data analysts hand curate, custom-made data lists to your exact ideal customer profile. We partner with 8 data providers giving us access to over 7+ billion data points, 450+ million companies and 550+ million contacts.
+
+          </p>
+        </div>
+      </div>
+      <div class="service-temp d-flex p-4 my-5 align-items-center">
+        
+        <div class="service-details">
+          <h3 class="mb-4 service-temp-title">Outbound Marketing</h3>
+          <p class="service-temp-desc">Using industry leading data sourcing our Lead Services process will build the foundations for your outbound campaign. We set up a customised outbound process using Email and LinkedIn to create a predictable flow of qualified opportunities for your team to convert into meetings.
+
+          </p>
+        </div>
+        <div class="service-img me-4">
+          <img src="/images/marketing.svg" alt="lead-research">
+        </div>
+      </div>
+      <div class="service-temp d-flex p-4 my-5 align-items-center">
+        <div class="service-img me-4">
+          <img src="/images/back-office.svg" alt="lead-research">
+        </div>
+        <div class="service-details">
+          <h3 class="mb-4 service-temp-title">Back-Office Services</h3>
+          <p class="service-temp-desc">We ensure the success of your business with our back-office outsourcing services, leveraging our professional associates with domain expertise, providing flexibility and lower costs and access to state-of-the-art technology and infrastructure. Scale your back-office processes cost-effectively with our functional and domain experts.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 
 
   <!-- services section goes here  -->
 
+  <!-- industries served -->
+    <div class="container my-5 p-4">
+      <h2 class="text-center my-4 section-heading__top-title-2">Serving a wide range of industries</h2>
+      <div class="industries row gx-4">
+        <div class="col-md-4 shadow-sm p-3 my-2">
+          <p><i class="fa-sharp fa-solid fa-house-signal me-2"></i>Consulting</p>
+          <p><i class="fa-solid fa-solar-panel me-2"></i>Solar Energy</p>
+          <p><i class="fa-solid fa-notes-medical me-2"></i>Healthcare & Pharmaceutical</p>
+          <p><i class="fa-brands fa-uncharted me-2"></i>Computer Software</p>
+          <p><i class="fa-solid fa-coins me-2"></i>Financial Services</p>
+          <p><i class="fa-solid fa-user-tie me-2"></i>Professional Services</p>
+        </div>
+        <div class="col-md-4 shadow-sm p-3 my-2">
+          
+          <p><i class="fa-solid fa-circle-info me-2"></i>Information Technology & Services</p>
+          <p><i class="fa-solid fa-microchip me-2"></i>Saas</p>
+          <p><i class="fa-solid fa-network-wired me-2"></i>IoT</p>
+          <p><i class="fa-solid fa-rectangle-ad me-2"></i>Advertising & Marketing</p>
+          <p><i class="fa-solid fa-money-bill me-2"></i>Non-Profit</p>
+          <p><i class="fa-brands fa-hive me-2"></i>Blockchain</p>
+        </div>
+        <div class="col-md-4 shadow-sm p-3 my-2">
+          
+          <p><i class="fa-solid fa-robot me-2"></i>IT & Cyber security</p>
+          <p><i class="fa-solid fa-truck-fast me-2"></i>Logistics</p>
+          <p><i class="fa-solid fa-pen-nib me-2"></i>Media Production & Design</p>
+          <p><i class="fa-solid fa-brain me-2"></i>AI Powered Solutions</p>
+          <p><i class="fa-solid fa-building me-2"></i>Construction</p>
+          <p><i class="fa-solid fa-cart-shopping me-2"></i>Retail & E-commerce</p>
+        </div>
+      </div>
+    </div>
+  <!-- industries served -->
+
+  <!-- what client says about us  -->
+  <div class="container">
+    <h2 class="text-center fw-bold">Client Testimonials</h2>
+  </div>
+  <div id="carouselExampleControls" class="carousel my-5 slide container" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="card-container">
+          <div class="card-img">
+            <img src="/images/about-img.png" class="img-fluid" alt="">
+          </div>
+          <div class="card-text-container">
+            <h2>Jason Wong</h2>
+            <p><small>CEO at Omnicharge</small></p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus impedit dolorum commodi quasi, reprehenderit repudiandae nemo tempora et blanditiis veniam!</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item"><div class="card-container">
+        <div class="card-img">
+          <img src="/images/about-img.png" class="img-fluid" alt="">
+        </div>
+        <div class="card-text-container">
+          <h2>Jason Wong</h2>
+          <p><small>CEO at Omnicharge</small></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus impedit dolorum commodi quasi, reprehenderit repudiandae nemo tempora et blanditiis veniam!</p>
+        </div>
+      </div>
+      </div>
+      <div class="carousel-item"><div class="card-container">
+        <div class="card-img">
+          <img src="/images/about-img.png" class="img-fluid" alt="">
+        </div>
+        <div class="card-text-container">
+          <h2>Jason Wong</h2>
+          <p><small>CEO at Omnicharge</small></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus impedit dolorum commodi quasi, reprehenderit repudiandae nemo tempora et blanditiis veniam!</p>
+        </div>
+      </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- what client says about us  -->
+
+
+  <!-- contact us form  -->
+
+  <div class="container my-5 mx-auto">
+    <h2 class="text-center">Contact us to begin your outbound journey</h2>
+    <div class="row my-4 g-4 contact-form-container d-flex justify-content-between">
+      <div class="col-md-6 p-4">
+        
+        <h4 class="text-center mb-3">Schedule a FREE consultation</h4>
+        <form >
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">First name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="companyName" class="form-label">Company name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <label for="jobTitle" class="form-label">Job Title</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control mb-3" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <textarea class="form-control" placeholder="Message" id="floatingTextarea2" style="height: 100px"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Contact Now</button>
+        </form>
+
+      </div>
+      <div class="col-md-6 p-4">
+        <h4>With Xen Matrix Today</br>
+          Your Business Gets:
+        </h4>
+        <div class="mt-3">
+          <div class="d-flex align-items-center flex-column flex-md-row">
+            <span class="value">25%</span><span class="value-details"> Average closing rate</span>
+            </div>
+            <div class="my-2 d-flex align-items-center flex-column flex-md-row">
+            <span class="value">10:1</span><span class="value-details"> $10-dollar return per $1</span>
+            </div>
+            <div class="d-flex align-items-center flex-column flex-md-row">
+            <span class="value">20</span><span class="value-details"> Appointments per campaign a month
+              </span>
+            </div>
+        </div>
+          
+      </div> 
+    </div>
+
+  </div>
+
+
+  <!-- contact us form  -->
+
+
+<!-- footer section goes heere -->
+
+
+
+<div class="container-fluid footer-container">
+  <footer class="pt-5 pb-4 container">
+    <div class="row">
+      <div class="col-6 col-md-2 mb-3">
+        
+        <img src="/images/logo.png" alt="">
+        <p>+01xxx xxx xxx</p>
+        <p>email@email.com</p>
+        <div class="social-media text-white">
+          <a href="#"><i class="fa-brands fa-linkedin text-light"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter text-light"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook  text-light"></i></a>
+          <a href="#"><i class="fa-brands fa-google-plus text-light"></i></a>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Company</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="/index.html" class="nav-link p-0">Home</a></li>
+          <li class="nav-item mb-2"><a href="#about" class="nav-link p-0">About</a></li>
+          <li class="nav-item dropdown mx-0">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/back-office-support.html">Back Office Support</a></li>
+              <li><a class="dropdown-item" href="/lead-generation.html">Lead Services</a></li>
+            </ul>
+          </li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Contacts</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <form>
+          <h5>Subscribe to our newsletter</h5>
+          <p>Monthly digest of what's new and exciting from us.</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="py-4 my-4">
+      <p>© 2022 Xen Matrix, Inc. All rights reserved.</p><a href="/privacy.html" target="_blank"><span>Privacy Policy</span></a>
+    </div>
+  </footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- footer section goes heere -->
+
+
+
+
+
+
+
+
+
 
     <!-- script file  -->
+    <Script src="/js/app.js"></Script>
+    <Script src="/js/particles.js"></Script>
+    <Script src="/js/particles.min.js"></Script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="https://kit.fontawesome.com/1ed2fe7716.js" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
   </body>
 </html>
